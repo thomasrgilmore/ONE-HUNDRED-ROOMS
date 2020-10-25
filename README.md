@@ -8,7 +8,7 @@ ONE HUNDRED ROOMS is a single script, text-only, rogue-like written in Python.
 Your goal is simple: see your nameless champion safely through one hundred potentially lethal rooms, before the game breaks itself. 
 It's minimal and programmatic-generation-focussed. It's another ascii dungeon crawler inspired by the original Rogue, but this time you fight Australian animals for some reason!
 
-+ Code by: Tom Gilmore
+ + Code: Tom Gilmore
  + Game design: Tom Gilmore & Alex Tulett
  + Lore: Alex Tulett & Tom Gilmore
  + ASCII fonts: 'Bloody' & 'Calvin S' @ patorjk.com
