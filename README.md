@@ -45,3 +45,11 @@ The game basically plays itself. Wait til it asks you to type something in, that
 Please send any bugs you find to me at:
  + http://tomgilmore.com.au/contact.php
 
+## + SCREEN SHOTS + 
+
+<img src="http://tomgilmore.com.au/img/game2.png">
+
+<img src="http://tomgilmore.com.au/img/game3.png">
+
+<img src="http://tomgilmore.com.au/img/game4.png">
+
