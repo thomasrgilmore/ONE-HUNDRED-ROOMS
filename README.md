@@ -25,7 +25,7 @@ It's minimal and programmatic-generation-focussed. It's another ascii dungeon cr
 	5. Hit return. Everything from there should be game
 
 If you'd like more help:
- + https://docs.python.org/2/using/mac.html
+ + https://docs.python.org/3/using/mac.html
 
 ### PC USERS:
 
