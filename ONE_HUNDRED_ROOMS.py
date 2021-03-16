@@ -22,7 +22,7 @@ import random
 
 ############################## TEST SETTINGS ###################################
 
-test = False
+test = True
 blood_text = True
 sleep_speed = 0.75
 line_width = os.get_terminal_size()[0]
@@ -491,7 +491,7 @@ enemies_biggest = [{'name':'cassowary', 'weight':60},
                    {'name':'saltwater crocodile', 'weight':400}
                    ]
 
-equiptment = [{'name':'baseball bat','power':5, 'toughness':0},
+equipment = [{'name':'baseball bat','power':5, 'toughness':0},
               {'name':'cricket bat', 'power':10, 'toughness':5},
               {'name':'leather coat', 'power':0, 'toughness':15},
               {'name':'cricket helmet', 'power':0, 'toughness':10},
@@ -589,7 +589,7 @@ treasure_tooltip = False
 room_choice_tooltip = False
 room_danger = random.choice(range(1,35))
 beep = lambda x: os.system("echo -n '\a';sleep 0.2;" * x)
-combined_treasure = equiptment+potions+potions[0:17]+potions[0:17]
+combined_treasure = equipment+potions+potions[0:17]+potions[0:17]
 
 if test == True:
   # global player settings
@@ -863,7 +863,7 @@ def new_room():
   global treasures
   global game_state
   global player_choice
-  global equiptment
+  global equipment
   global potions
   global combined_treasure
   global fight_table
@@ -1535,7 +1535,7 @@ def inventory_use():
   global treasures
   global game_state
   global player_choice
-  global equiptment
+  global equipment
   global potions
   global combined_treasure
   global fight_table
@@ -1645,23 +1645,23 @@ Your choice: """)
             print("-"*line_width)
             print("Type the name of the item you'd like to equip...")
             print('-'*line_width)
-            equiptment_to_change = input('Your choice: ')
+            equipment_to_change = input('Your choice: ')
             print("-"*line_width)
-            the_equiptment = list(filter(lambda inventory: inventory['name'] == equiptment_to_change, inventory))
+            the_equipment = list(filter(lambda inventory: inventory['name'] == equipment_to_change, inventory))
             try:
-              print("Equipping:", equiptment_to_change)
-              print(the_equiptment[0])
-              power += the_equiptment[0]['power']
-              toughness += the_equiptment[0]['toughness']
-              xp += the_equiptment[0]['xp']
-              hp += the_equiptment[0]['hp']
+              print("Equipping:", equipment_to_change)
+              print(the_equipment[0])
+              power += the_equipment[0]['power']
+              toughness += the_equipment[0]['toughness']
+              xp += the_equipment[0]['xp']
+              hp += the_equipment[0]['hp']
               print("-"*line_width)
             except:
 
               print("-"*line_width)
             try:
-              equipped.append(the_equiptment[0])
-              inventory.remove(the_equiptment[0])
+              equipped.append(the_equipment[0])
+              inventory.remove(the_equipment[0])
             except:
               pass
 
@@ -1686,23 +1686,23 @@ Your choice: """)
         print("-"*line_width)
         print("Type the name of the item you'd like to unequip...")
         print('-'*line_width)
-        equiptment_to_change = input('Your choice: ')
+        equipment_to_change = input('Your choice: ')
         print("-"*line_width)
-        the_equiptment = list(filter(lambda equipped: equipped['name'] == equiptment_to_change, equipped))
+        the_equipment = list(filter(lambda equipped: equipped['name'] == equipment_to_change, equipped))
         try:
-          print("Removing:", equiptment_to_change)
-          print(the_equiptment[0])
-          power -= the_equiptment[0]['power']
-          toughness -= the_equiptment[0]['toughness']
-          xp -= the_equiptment[0]['xp']
-          hp -= the_equiptment[0]['hp']
+          print("Removing:", equipment_to_change)
+          print(the_equipment[0])
+          power -= the_equipment[0]['power']
+          toughness -= the_equipment[0]['toughness']
+          xp -= the_equipment[0]['xp']
+          hp -= the_equipment[0]['hp']
           print("-"*line_width)
         except:
           print_fancy(">> Error please try again!")
           print("-"*line_width)
         try:
-          equipped.remove(the_equiptment[0])
-          inventory.append(the_equiptment[0])
+          equipped.remove(the_equipment[0])
+          inventory.append(the_equipment[0])
         except:
           pass
     else:
@@ -1750,7 +1750,7 @@ def treasure_check():
   global treasures
   global game_state
   global player_choice
-  global equiptment
+  global equipment
   global potions
   global combined_treasure
   global fight_table
