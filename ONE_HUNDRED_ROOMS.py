@@ -22,7 +22,7 @@ import random
 
 ############################## TEST SETTINGS ###################################
 
-test = True
+test = False
 blood_text = True
 sleep_speed = 0.75
 line_width = os.get_terminal_size()[0]
